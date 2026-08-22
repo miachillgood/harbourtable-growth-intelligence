@@ -56,7 +56,8 @@ Pandas metric + feature layer ──► scikit-learn temporal churn model
 Python 3.11 or newer is recommended.
 
 ```bash
-cd restaurant-growth-intelligence
+git clone https://github.com/miachillgood/sushi-crm.git
+cd sushi-crm
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -r requirements.txt
