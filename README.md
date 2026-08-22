@@ -1,8 +1,8 @@
-# Restaurant Growth Intelligence
+# HarbourTable
 
-An end-to-end, clean-room GTM analytics product for a fictional four-location Auckland hospitality group. It turns customer, order, web, campaign, and corporate-catering data into decisions a small growth team can actually review and act on. The model is deliberately reusable across restaurants, cafés, quick-service concepts, and catering operations rather than tied to one cuisine.
+Restaurant growth intelligence for a fictional four-location Auckland hospitality group. HarbourTable turns customer, order, web, campaign, and corporate-catering data into decisions a small growth team can review and act on. Its operating model is reusable across restaurants, cafés, quick-service concepts, and catering operations rather than tied to one cuisine.
 
-This is a portfolio build, not a reskin of an existing dashboard. The workflow was inspired by the scope of [`parlhad/Swiggy-End-To-End-Data-Analytics`](https://github.com/parlhad/Swiggy-End-To-End-Data-Analytics), then implemented from scratch because that repository does not declare an explicit licence. All code, metrics, data generation, interface, tests, and safety controls in this repository are original.
+The product brings commercial analytics, customer intelligence, experiment measurement, B2B pipeline management, and approval-first CRM actions into one traceable workflow.
 
 ## Business scenario
 
@@ -56,8 +56,8 @@ Pandas metric + feature layer ──► scikit-learn temporal churn model
 Python 3.11 or newer is recommended.
 
 ```bash
-git clone https://github.com/miachillgood/sushi-crm.git
-cd sushi-crm
+git clone https://github.com/miachillgood/harbourtable-growth-intelligence.git
+cd harbourtable-growth-intelligence
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -r requirements.txt
@@ -121,7 +121,7 @@ The synthetic generator deliberately gives engagement behaviour a noisy relation
 - No restaurant, customer, Google, or HubSpot account is accessed by default.
 - Approval in mock mode records a realistic workflow but explicitly reports `external_write: false`.
 - Marketing consent is represented in the source data, but a real deployment would still need suppression lists, legal review, identity resolution, role-based access, retention policy, and experiment governance.
-- The catering pipeline is designed for interview/demo validation with a restaurant owner or manager before any claim of real commercial impact.
+- The catering pipeline is designed for pilot validation with a restaurant owner or manager before any claim of real commercial impact.
 
 ## Repository map
 
@@ -137,15 +137,15 @@ app/
 data/
   README.md           source definitions and intentional defects
 scripts/
-  seed_data.py        reproducible data generation entry point
+  seed_data.py        deterministic data generation entry point
 tests/                analytics, workflow and HTTP integration checks
 ```
 
-## Portfolio claim boundary
+## Project claim boundary
 
 Safe claim after independently running the test suite:
 
-> Built a clean-room restaurant GTM intelligence product that unifies transactional, behavioural, campaign, and B2B pipeline signals; temporally validates churn propensity; quantifies experiments; and routes evidence-backed CRM recommendations through a persistent human-approval workflow.
+> Built HarbourTable, a restaurant GTM intelligence product that unifies transactional, behavioural, campaign, and B2B pipeline signals; temporally validates churn propensity; quantifies experiments; and routes evidence-backed CRM recommendations through a persistent human-approval workflow.
 
 Do not claim that the product has increased revenue, reduced churn, or been deployed by a real restaurant until an actual pilot supplies that evidence.
 

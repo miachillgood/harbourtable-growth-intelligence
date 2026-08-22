@@ -553,10 +553,10 @@ class AnalyticsEngine:
         return _python(
             {
                 "meta": {
-                    "title": "Restaurant Growth Intelligence",
+                    "title": "HarbourTable",
                     "subtitle": "Customer, campaign and catering signals for a fictional Auckland hospitality group",
                     "as_of": ANCHOR_DATE.date().isoformat(),
-                    "data_mode": "100% synthetic demo data",
+                    "data_mode": "100% synthetic data",
                     "filters": filters.__dict__,
                     "stores": stores,
                     "channels": ["all", "in_store", "website", "mobile_app", "uber_eats"],

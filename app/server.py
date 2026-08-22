@@ -110,7 +110,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
                         "mode": "CSV adapter",
                         "configured": True,
                         "source": "web_events.csv",
-                        "guardrail": "The demo uses GA4-style synthetic events; no Google account is accessed.",
+                        "guardrail": "HarbourTable uses GA4-style synthetic events; no Google account is accessed.",
                     },
                     "llm": {
                         "mode": "configured" if self.services.brief.provider.configured else "deterministic fallback",
@@ -154,12 +154,12 @@ def create_server(host: str, port: int, services: Services | None = None) -> Thr
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run Restaurant Growth Intelligence")
+    parser = argparse.ArgumentParser(description="Run HarbourTable")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=int(os.getenv("APP_PORT", "8787")))
     args = parser.parse_args()
     server = create_server(args.host, args.port)
-    print(f"Restaurant Growth Intelligence running at http://{args.host}:{args.port}")
+    print(f"HarbourTable running at http://{args.host}:{args.port}")
     print("Synthetic data mode. HubSpot writes are approval-gated and disabled by default.")
     try:
         server.serve_forever()

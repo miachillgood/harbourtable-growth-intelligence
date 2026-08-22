@@ -41,7 +41,7 @@ def test_http_api_and_static_dashboard(tmp_path, monkeypatch) -> None:
         with urllib.request.urlopen(f"{base}/", timeout=10) as response:
             html = response.read().decode("utf-8")
         assert response.status == 200
-        assert "Restaurant Growth Intelligence" in html
+        assert "HarbourTable" in html
 
         _, actions = _json(f"{base}/api/actions")
         first_id = actions["actions"][0]["id"]

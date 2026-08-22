@@ -1,1 +1,1 @@
-"""Restaurant Growth Intelligence application package."""
+"""HarbourTable application package."""
