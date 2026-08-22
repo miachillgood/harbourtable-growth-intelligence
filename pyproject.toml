@@ -1,0 +1,17 @@
+[project]
+name = "restaurant-growth-intelligence"
+version = "0.1.0"
+description = "Clean-room restaurant GTM analytics and approval-first CRM automation demo"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<3",
+  "scikit-learn>=1.5,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
